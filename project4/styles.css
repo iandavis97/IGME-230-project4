@@ -2,8 +2,31 @@ body{
     display: block;
     background-color:lightblue;
 }
-h1{
+p{
+    background-color:white;
     text-align: center;
+    padding: 1em;
+    margin:2em;
+}
+h1,h2,nav{
+    text-align: center;
+}
+a{
+    display: inline;
+    background-color:white;
+    text-align: center;
+    padding:1em;
+    text-decoration: none;
+    color:black;
+}
+a:hover{
+    background-color:black;
+    color:white;
+}
+nav{
+    margin-top:2em;
+    margin-bottom:2em;
+    text-align:center;
 }
 #piano{
     margin:10em auto;
@@ -16,10 +39,7 @@ img{
     padding:0;
     position: relative;
 }
-.black{
-    float:left;
-}
-.white{
+.black,.white{
     float:left;
 }
 #gSharp{

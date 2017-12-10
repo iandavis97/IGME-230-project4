@@ -1,4 +1,3 @@
-<!--https://www.npmjs.com/package/howler-->
 <!DOCTYPE HTML>
 <html lang="en">
 <head>
@@ -6,171 +5,14 @@
     <meta nam3="viewport"
     content="width=device-width,initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible"content=" ie=edge">
-    <title>Virtual Piano</title>
+    <title>Navigational Page</title>
     <link href="styles.css" rel="stylesheet" type="text/css">
-    <script src="howler.js-master/dist/howler.min.js"></script>
-    
 </head>
-    <body>
-        <h1>Virtual Piano</h1>
-        <div id="piano">
-        <div id="gSharp"><img id="gSharp-note" class="black"src="images/gSharp-note.png"alt="g# piano key"></div>
-        <div id="a-note"><img id="a-note" class="white"src="images/a-note.png"alt="a piano key"></div>
-        <div id="aSharp"><img id="aSharp-note" class="black"src="images/aSharp-note.png"alt="a# piano key"></div>
-        <div id="b-note"><img id="b-note" class="white"src="images/b-note.png"alt="b piano key"></div>
-        <div id="c-note"><img id="c-note" class="white"src="images/c-note.png"alt="c piano key"></div>
-        <div id="cSharp"><img id="cSharp-note" class="black"src="images/cSharp-note.png"alt="c# piano key"></div>
-        <div id="d-note"><img id="d-note" class="white"src="images/d-note.png"alt="d piano key"></div>
-        <div id="dSharp"><img id="dSharp-note" class="black"src="images/dSharp-note.png"alt="d# piano key"></div>
-        <div id="e-note"><img id="e-note" class="white"src="images/e-note.png"alt="e piano key"></div>
-        <div id="f-note"><img id="f-note" class="white"src="images/f-note.png"alt="f piano key"></div>
-        <div id="fSharp"><img id="fSharp-note" class="black"src="images/fSharp-note.png"alt="f# piano key"></div>
-        <div id="g-note"><img id="g-note" class="white"src="images/g-note.png"alt="g piano key"></div>
-        </div>
-        
-        <script>
-            /*defining the sounds*/
-        var c=new Howl({
-            src:['piano notes/68441__pinkyfinger__piano-c.wav']
-        });
-            var cSharp=new Howl({
-            src:['piano notes/68440__pinkyfinger__piano-c.wav']
-        });
-            var d=new Howl({
-            src:['piano notes/68442__pinkyfinger__piano-d.wav']
-        });
-            var dSharp=new Howl({
-            src:['piano notes/68444__pinkyfinger__piano-eb.wav']
-        });
-            var e=new Howl({
-            src:['piano notes/68443__pinkyfinger__piano-e.wav']
-        });
-            var f=new Howl({
-            src:['piano notes/68446__pinkyfinger__piano-f.wav']
-        });
-            var fSharp=new Howl({
-            src:['piano notes/68445__pinkyfinger__piano-f.wav']
-        });
-            var g=new Howl({
-            src:['piano notes/68448__pinkyfinger__piano-g.wav']
-        });
-            var gSharp=new Howl({
-            src:['piano notes/68447__pinkyfinger__piano-g.wav']
-        });
-            var a=new Howl({
-            src:['piano notes/68437__pinkyfinger__piano-a.wav']
-        });
-            var aSharp=new Howl({
-            src:['piano notes/68439__pinkyfinger__piano-bb.wav']
-        });
-            var b=new Howl({
-            src:['piano notes/68438__pinkyfinger__piano-b.wav']
-        });
-        /*list of notes*/
-        var sounds=[c,cSharp,d,dSharp,e,f,fSharp,g,gSharp,a,aSharp,b];
-        var notes=["c-note","cSharp","d-note","dSharp","e-note","f-note","fSharp","g-note","gSharp","a-note","aSharp","b-note"];
-        /*playing notes*/
-        function playSound(note){
-            note.play();
-            console.log(note+" clicked");
-        }
-            /*playing the notes*/
-            for(let i=0;i<notes.length;i++){
-                document.getElementById(notes[i]).addEventListener('click',function(){
-                    playSound(sounds[i]);
-                    /*changing note opacity*/
-                    if(sounds[i].playing()===true){
-                        document.getElementById(notes[i]).style.opacity=".5";
-                    }
-                    else if(sounds[i].playing()===false)
-                        document.getElementById(notes[i]).style.opacity="1";
-                });
-                console.log("Added listener to "+notes[i]);
-            }
-            /*
-        document.querySelector("#c-note").onclick=function(){
-            playSound(c,"c-note");
-            if(c.playing()===true)
-                document.querySelector("c-note").style.opacity=".5";
-            else
-                document.querySelector("c-note").style.opacity="1";
-        };
-        document.querySelector("#cSharp-note").onclick=function(){
-            playSound(cSharp,"cSharp");
-            if(cSharp.playing()===true)
-                document.querySelector("cSharp-note").style.opacity=".5";
-            else
-                document.querySelector("cSharp-note").style.opacity="1";
-        };
-        document.querySelector("#d-note").onclick=function(){
-            playSound(d,"d-note");
-            if(d.playing()===true)
-                document.querySelector("cSharp-note").style.opacity=".5";
-            else
-                document.querySelector("cSharp-note").style.opacity="1";
-        };
-        document.querySelector("#dSharp-note").onclick=function(){
-            playSound(dSharp,"dSharp");
-            if(dSharp.playing()===true)
-                document.querySelector("dSharp-note").style.opacity=".5";
-            else
-                document.querySelector("dSharp-note").style.opacity="1";
-        };
-        document.querySelector("#e-note").onclick=function(){
-            playSound(e,"e-note");
-            if(e.playing()===true)
-                document.querySelector("e-note").style.opacity=".5";
-            else
-                document.querySelector("e-note").style.opacity="1";
-        };
-        document.querySelector("#f-note").onclick=function(){
-            playSound(f,"f-note");
-            if(f.playing()===true)
-                document.querySelector("f-note").style.opacity=".5";
-            else
-                document.querySelector("f-note").style.opacity="1";
-        };
-        document.querySelector("#fSharp-note").onclick=function(){
-            playSound(fSharp,"fSharp");
-            if(fSharp.playing()===true)
-                document.querySelector("fSharp-note").style.opacity=".5";
-            else
-                document.querySelector("fSharp-note").style.opacity="1";
-        };
-        document.querySelector("#g-note").onclick=function(){
-            playSound(g,"g-note");
-            if(g.playing()===true)
-                document.querySelector("g-note").style.opacity=".5";
-            else
-                document.querySelector("g-note").style.opacity="1";
-        };
-        document.querySelector("#gSharp-note").onclick=function(){
-            playSound(gSharp,"gSharp");
-            if(gSharp.playing()===true)
-                document.querySelector("gSharp-note").style.opacity=".5";
-            else
-                document.querySelector("gSharp-note").style.opacity="1";
-        };
-        document.querySelector("#a-note").onclick=function(){
-            playSound(a,"a-note");
-            if(a.playing()===true)
-                document.querySelector("a-note").style.opacity=".5";
-            else
-                document.querySelector("a-note").style.opacity="1";
-        };
-        document.querySelector("#aSharp-note").onclick=function(){
-            playSound(aSharp,"aSharp");
-            if(aSharp.playing()===true)
-                document.querySelector("aSharp-note").style.opacity=".5";
-            else
-                document.querySelector("aSharp-note").style.opacity="1";
-        };
-        document.querySelector("#b-note").onclick=function(){
-            playSound(b,"b-note");
-            if(b.playing()===true)
-                document.querySelector("b-note").style.opacity=".5";
-            else
-                document.querySelector("b-note").style.opacity="1";
-        };*/
-    </script>
+<body>
+    <h1>Virtual Piano</h1>
+    <h2>Navigation and Description</h2>
+    <nav>
+    <a href="piano1.html">Basic Piano</a>
+        <p>A minimalist keyboard with twelve keys layed out from G Sharp to G.</p>
+    </nav>
     </body>
