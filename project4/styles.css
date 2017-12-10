@@ -1,0 +1,68 @@
+body{
+    display: block;
+    background-color:lightblue;
+}
+h1{
+    text-align: center;
+}
+#piano{
+    margin:10em auto;
+    padding:3em 0 0 3em;
+    position:relative;
+    left:35%;
+}
+img{
+    margin:0;
+    padding:0;
+    position: relative;
+}
+.black{
+    float:left;
+}
+.white{
+    float:left;
+}
+#gSharp{
+    position: relative;
+    left:15px;
+}
+#aSharp{
+    position: relative;
+    right:9px;
+}
+#b-note{
+    position: relative;
+    right:17px;
+}
+#c-note{
+    position: relative;
+    right:18px;
+}
+#cSharp{
+    position: relative;
+    right:57px;
+}
+#d-note{
+    position:relative;
+    right:35px;
+}
+#dSharp{
+    position: relative;
+    right:83px;
+}
+#e-note{
+    position: relative;
+    right: 52px;
+}
+#f-note{
+    position: relative;
+    right:53px;
+}
+#fSharp{
+    position: relative;
+    right:131px;
+}
+#g-note{
+    position: relative;
+    right:70px;
+}
