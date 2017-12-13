@@ -29,7 +29,7 @@ nav{
     text-align:center;
 }
 #piano{
-    margin:10em auto;
+    margin: auto;
     padding:3em 0 0 3em;
     position:relative;
     left:35%;
@@ -85,4 +85,11 @@ img{
 #g-note{
     position: relative;
     right:70px;
+}
+
+/*styling the light bars*/
+#lights,p{
+    text-align: left;
+    padding:.25em;
+    margin:.25em;;
 }
