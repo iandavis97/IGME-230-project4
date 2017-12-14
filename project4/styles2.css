@@ -1,0 +1,90 @@
+body{
+    display: block;
+    background-color:lightblue;
+}
+h1,h2,nav{
+    text-align: center;
+}
+a{
+    display: inline;
+    background-color:white;
+    text-align: center;
+    padding:1em;
+    text-decoration: none;
+    color:black;
+}
+a:hover{
+    background-color:black;
+    color:white;
+}
+nav{
+    margin-top:2em;
+    margin-bottom:2em;
+    text-align:center;
+}
+#piano{
+    padding:3em 0 0 3em;
+    position:relative;
+    left:30%;
+    bottom:100px;
+}
+img{
+    margin:0;
+    padding:0;
+    position: relative;
+}
+.black,.white{
+    float:left;
+}
+.black{
+    background-color: black;
+}
+.white{
+    z-index: -10;
+    background-color: white;
+}
+
+#gSharp{
+    position: relative;
+    left:20px;
+}
+#aSharp{
+    position: relative;
+    right:13px;
+}
+#b-note{
+    position: relative;
+    right:22px;
+}
+#c-note{
+    position: relative;
+    right:23px;
+}
+#cSharp{
+    position: relative;
+    right:75px;
+}
+#d-note{
+    position:relative;
+    right:45px;
+}
+#dSharp{
+    position: relative;
+    right:109px;
+}
+#e-note{
+    position: relative;
+    right: 67px;
+}
+#f-note{
+    position: relative;
+    right:68px;
+}
+#fSharp{
+    position: relative;
+    right:170px;
+}
+#g-note{
+    position: relative;
+    right:90px;
+}
