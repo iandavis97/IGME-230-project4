@@ -5,7 +5,7 @@ body{
 h1,h2,nav{
     text-align: center;
 }
-a{
+nav a{
     display: inline;
     background-color:white;
     text-align: center;
@@ -22,6 +22,8 @@ nav{
     margin-bottom:2em;
     text-align:center;
 }
+.navpage{color:blue;}
+.greystyle{color:gray;}
 #piano{
     padding:3em 0 0 3em;
     position:relative;

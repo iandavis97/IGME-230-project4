@@ -1,0 +1,40 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta nam3="viewport"
+    content="width=device-width,initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible"content=" ie=edge">
+    <title>Navigational Page</title>
+    <link href="styles.css" rel="stylesheet" type="text/css">
+</head>
+    <body>
+        
+        <h1>Virtual Piano</h1>
+        <h2>Documentation</h2>
+        <nav id="navbar">
+            <a class="navpage"href="index.html"target="_parent">Navigation</a>
+            <a class="navpage"href="piano1.html" target="_parent">Basic Piano</a>
+            <a class="navpage"href="piano2.html"target="_parent">Piano Lights</a>
+            <a class="navpage"href="piano3.html"target="_parent">Piano Keyboard</a>
+            <a class="navpage"href="documentation.html"target="_parent">Documentation</a>
+        </nav>
+        <p>
+            I constructed the piano by getting images of each individual key and placed them
+            together using relative positioning in CSS.
+            In order to create the site I had to learn how to use the <a href="https://howlerjs.com/">Howler.js </a> library in order to play audio
+            files in a simple manner. This involved creating the Howl objects, obtaining the audio files,
+            and making a function to play the sounds. 
+        </p>
+        <p>
+            It took some time getting everything working 100% smoothly such as using event listeners for
+            playing sounds since a regular function wouldn't work for audio files using an onclick event.
+            The piano keys in all three interactions only change opacity when a sound is playing and when the mouse is being clicked or a key is pressed. Tying these interactions together took the most time and a lot of 
+            troubleshooting. 
+        </p>
+        <p>
+            In terms of how I went "above and beyond", I learned how to check for speciic key presses
+            and execute functions based on that. I learned how to check using this resource <a href="https://javascript.info/keyboard-events">here</a>.
+            In addition, I learned how to show what link the user is currently on using Javascript from the resource <a href="https://www.xul.fr/javascript/navigation-bar.php">here</a>.
+        </p>
+    </body>

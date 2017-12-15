@@ -11,7 +11,7 @@ p{
 h1,h2,nav{
     text-align: center;
 }
-a{
+nav a{
     display: inline;
     background-color:white;
     text-align: center;
@@ -28,11 +28,13 @@ nav{
     margin-bottom:2em;
     text-align:center;
 }
+.navpage{color:blue;}
+.greystyle{color:gray;}
 #piano{
     margin: auto;
     padding:3em 0 0 3em;
     position:relative;
-    left:35%;
+    left:34%;
 }
 img{
     margin:0;
@@ -88,7 +90,7 @@ img{
 }
 
 /*styling the light bars*/
-#lights,p{
+#lights,.bar{
     text-align: left;
     padding:.25em;
     margin:.25em;;
